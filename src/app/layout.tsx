@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from '@aws-amplify/ui-react';
+//import '@aws-amplify/ui-react/styles.css';
+//import { ThemeProvider } from '@aws-amplify/ui-react';
+//import { BankAccountCreateForm } from '../../ui-components';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +31,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        
         {children}
+        {/*<ThemeProvider>
+        {children}
+        </ThemeProvider>*/}
       </body>
     </html>
   );
